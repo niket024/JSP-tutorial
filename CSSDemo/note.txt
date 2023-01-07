@@ -1,0 +1,16 @@
+CSS-cascade style sheet
+-----------------------
+every css file should must be save by .css ext.
+U can use it by two ways
+1.Implicitly
+	<style>
+	------
+	</style>
+2.Explictly
+<link rel="stylesheet" type="text/css" href="filename.css"/>
+
+CSS is working based upon selectors
+----------------------------
+1.id
+2.class
+3.component 

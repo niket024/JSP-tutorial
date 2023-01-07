@@ -1,0 +1,7 @@
+111111111<br>
+
+<jsp:include page="Servlet1"><br>
+<jsp:param value="abc" name="param1"/><br>
+<jsp:param value="xyz" name="param2"/><br>
+</jsp:include>
+222222222

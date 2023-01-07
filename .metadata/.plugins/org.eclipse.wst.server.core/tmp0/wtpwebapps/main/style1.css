@@ -1,0 +1,36 @@
+#navigation
+{
+margin:0 auto;
+width:945px;
+height:40px;
+background:#ff0033;
+border:8px solid #333300;
+}
+#navigation ul
+{
+list-style: disc;
+}
+#navigation ul li
+{
+color:#000066;
+float:left;
+text-align: inherit;
+font:bold 15px/40px Arial, Helvetica, sans-serif;
+width:127px;
+border-right:1px solid #282828;
+}
+#navigation ul li a
+{
+text-decoration:none;
+display:block;
+color:#adadad;
+}
+#navigation ul li a:hover
+{
+color:#FFFFFF;
+}
+#navigation ul li.last
+{
+border:none;
+float:left;
+}

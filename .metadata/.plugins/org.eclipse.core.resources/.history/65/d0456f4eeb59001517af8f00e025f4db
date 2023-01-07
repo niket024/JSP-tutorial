@@ -1,0 +1,10 @@
+.errorFont
+{
+	font-size: 50;
+	color: red;
+}
+.fieldFont
+{
+	font-size: 30;
+	color: red;
+}

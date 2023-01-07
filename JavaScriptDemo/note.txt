@@ -1,0 +1,18 @@
+JavaScript
+------------
+It is one of the scripting language for browser.
+We can use javaScript by two ways
+---------------
+1.implicitly
+---------------------
+In the same html file
+<script>
+---------
+----------
+</script>
+2.explicitly
+----------------
+We can create a seperat file with .js ext.
+and we need to include it in html file
+<script src="filename.js"></script>
+the file of javaScript should must be save by .js extension.

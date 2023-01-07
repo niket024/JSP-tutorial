@@ -1,0 +1,78 @@
+package com.pack1;
+
+import java.io.IOException;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.Tag;
+
+public class ReverseTag implements Tag
+{
+	private PageContext pc = null;
+	private String param1 = null;
+
+	@Override
+	public void setPageContext(PageContext arg0)
+	{
+		System.out.println("setpagecontext");
+		pc = arg0;
+	}
+
+	public void setParam1(String param1)
+	{
+		System.out.println("setparam1");
+		this.param1 = param1;
+	}
+
+	@Override
+	public void setParent(Tag arg0)
+	{
+		System.out.println("setparent");
+
+	}
+
+	@Override
+	public Tag getParent()
+	{
+		System.out.println("getpagecontext");
+		return null;
+
+	}
+
+	@Override
+	public int doStartTag() throws JspException
+	{
+		System.out.println("dostarttag");
+		JspWriter out = pc.getOut();
+		StringBuffer reversestring = new StringBuffer(param1).reverse();
+		try
+		{
+			out.println("The reverse of parameter" + param1 + " is: "
+					+ reversestring + "<br>");
+		} catch (IOException ex)
+		{
+			ex.printStackTrace();
+		}
+		return EVAL_BODY_INCLUDE;
+	}
+
+	@Override
+	public int doEndTag() throws JspException
+	{
+		System.out.println("doend tag");
+		return SKIP_BODY;
+
+	}
+
+	@Override
+	public void release()
+	{
+		System.out.println("release");
+
+	}
+	public String getParam1()
+	{
+		return param1;
+	}
+}

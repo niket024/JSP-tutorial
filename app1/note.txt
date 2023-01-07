@@ -1,0 +1,46 @@
+JSP
+-----------
+Java Server Page
+---------------
+1.It is a combination of html code and java code.
+2.file extension of jsp page should be .jsp
+3.We can't run the jsp file without server
+Jsp id maintaining 4 tags
+---------------------------
+1.declarative tag
+----------------
+it is for global variable declaration
+syntax:
+<%!
+---
+---
+%>
+eg.
+<%!
+int i=10;
+%>
+
+2.Expression tag
+----------------------
+It mainly for output  or it is just like sop
+syntax:
+-----
+<%= 12+12  %>
+
+3.Scriptlet
+-------------
+It is just like your method body
+sysntax:
+----------
+<%
+int i=10;
+A a1=new A();
+a1.test();
+%>
+
+4.Directive tag
+----------------
+It is for importing any packages
+syntax:
+----------------
+<%page import ="java.lang.*" %>

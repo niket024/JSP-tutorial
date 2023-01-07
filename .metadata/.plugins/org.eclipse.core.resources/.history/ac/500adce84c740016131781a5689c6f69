@@ -1,0 +1,7 @@
+Custom tag library
+-----------------
+This is introduce to reduce the jsp code or java code
+and to improve the performance
+Steps:
+1.create a simple class
+2.implements it by Tag interface

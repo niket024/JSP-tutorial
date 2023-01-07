@@ -1,0 +1,101 @@
+  <%@ page import="java.sql.Connection"%>
+  <%@ page import="java.sql.Statement"%>
+  <%@ page import="java.sql.ResultSet"%>
+  <%@ page import="java.sql.DriverManager"%>
+  <%@ page import="java.sql.SQLException"%>
+  <body bgcolor="gray"></body>
+  <%
+  String s1=request.getParameter("username"); 
+  String s2=request.getParameter("password"); 
+  if(s1!=null && s2!=null)
+  {
+  String sql="select * from reg where uname='"+s1+"'and pwd ='"+s2+"'";
+  try
+  {
+  Class.forName("oracle.jdbc.driver.OracleDriver");
+  }
+  catch(ClassNotFoundException ex)
+  {
+  ex.printStackTrace();
+  }
+  
+  Connection con=null;
+  Statement stmt=null;
+  ResultSet rs=null;
+  boolean status=false;
+  try
+  {
+  con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","JDBC","GREAT123");
+  stmt=con.createStatement();
+  rs=stmt.executeQuery(sql);
+  status=rs.next();
+  }
+  catch(SQLException ex)
+  {
+	  ex.printStackTrace();
+  }
+  finally
+  {
+	  try
+	  {
+		  if(rs!=null)
+		  {
+			  rs.close();
+			  rs=null;
+		  }
+	 }
+	  catch(SQLException ex)
+	  {
+		  ex.printStackTrace();
+	  }
+	  try
+	  {
+		  if(stmt!=null)
+		  {
+			  stmt.close();
+			  stmt=null;
+		  }
+	 }
+	  catch(SQLException ex)
+	  {
+		  ex.printStackTrace();
+	  }
+	  try
+	  {
+		  if(con!=null)
+		  {
+			  con.close();
+			  con=null;
+		  }
+	  }
+	  catch(SQLException ex)
+	  {
+		  ex.printStackTrace();
+	  }
+	}
+  if(status)
+  {
+%>
+	  <jsp:forward page="success.jsp"/>
+  
+  <%
+  }
+  else
+  {
+	  out.println("login is failed");
+  }
+  }
+  else
+  {
+	  s1="  ";
+  }
+  %>
+  ${pageContext.request.method}</br>
+  <form action="" method="post">
+	  Username:
+	  <input type="text" name="username"/><br>
+	  Password:
+	  <input type="password" name="password"/><br>
+	  <input type="submit" value="Login"/><br>
+  </form>
+  

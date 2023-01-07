@@ -1,0 +1,39 @@
+Directive include
+-----------
+1.<%@ page %>
+2.<%@ include %>
+3.<%@ taglib %>
+
+Action Include
+---------------
+1.<jsp:include/>
+2.<jsp:forward/>
+3.<jsp:setProperty/>
+4.<jsp:getProperty/>
+5.<jsp:param/>
+6.<jsp:usebean/>
+
+Difference between Directive include and action include
+--------------------------------------------------
+1.Java file is creating only for source jsp file in directive include 
+but in action for both source and destination.
+2.We can declare variable in one file and we can print it in another file
+in case of directive but not in action include.
+3.We cannot give the file name by variable in case of directive include
+but in action.
+4.We can not make jsp to servlet call in case of directive include
+but in action include.
+
+Implicit Object
+-------------------
+An object which already existing in every class of file.
+It is totally 9 in no.
+1.request
+2.response
+3.session
+4.page
+5.pageContext
+6.exception
+7.config
+8.application
+9.out

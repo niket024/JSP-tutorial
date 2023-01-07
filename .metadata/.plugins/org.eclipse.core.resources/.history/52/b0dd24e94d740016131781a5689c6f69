@@ -1,0 +1,14 @@
+Custom tag library
+-----------------
+This is introduce to reduce the jsp code or java code
+and to improve the performance
+Steps:
+1.create a simple class
+2.implements it by Tag interface
+3.override the six unimplemented method
+	1.setPageContext()
+	2.setParent()
+	3.getParent()
+	4.doStarttag()
+	5.doEndtag()
+	6.relaese()

@@ -1,0 +1,11 @@
+UseBean tag-
+---------------
+with the help of usebean tag we can create any java class object.
+
+Scope of Usebean tag
+------------------------
+there are mainly four scope of usebean tag
+1.page
+2.request
+3.session
+4.application

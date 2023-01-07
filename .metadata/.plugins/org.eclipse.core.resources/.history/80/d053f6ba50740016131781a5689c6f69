@@ -1,0 +1,31 @@
+Custom tag library
+-----------------
+This is introduce to reduce the jsp code or java code
+and to improve the performance
+Steps:
+1.create a simple class
+2.implements it by Tag interface
+3.override the six unimplemented method
+	1.setPageContext()
+	2.setParent()
+	3.getParent()
+	4.doStarttag()
+	5.doEndtag()
+	6.relaese()
+4.create a custom.tld file under WEb-INF folder
+<taglib>
+
+	<jsp-version>2.0</jsp-version>
+	<tlib-version>1.1</tlib-version>
+	<tag>
+		<name>hello</name>
+		<tag-class>your tag class</tag-class>
+	</tag>
+</taglib>
+
+4 costatnts
+-----------
+EVAL_BODY_INCLUDE
+SKIP_BODY
+EVAL_PAGE
+SKIP_PAGE
